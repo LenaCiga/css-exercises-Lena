@@ -10,6 +10,34 @@ img {
 .title {
   font-size: 36px;
   font-weight: 900;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.container-all {
+  display: flex;
+  /* justify nisam stavila jer i bez toga mi delovalo kao da funkcionise jer je bio full width flex container */
+  justify-content: center;
+  gap: 52px;
+}
+
+.container-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* ovde su oni dodali max-width, ja sam razmisljala ali nisam to uradila */
+  max-width: 200px;
+}
+
+/* ovo nije trebalo, trebao je container-child da ima max width 200px
+  img {
+  width: 200px;
+  height: auto;
+} */
+
+/* tekst su centrirali tako sto su u body dodali text-align center */
+.text {
+  text-align: center;
 }
 
 /* do not edit this footer */
