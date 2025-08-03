@@ -12,6 +12,31 @@ body {
   background: white;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 0 8px rgba(0,0,0,.1);
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; ne treba mi ovde jer imam u child flex containers to*/
+  padding: 8px;
+}
+/* Trebala sam da grupisem levu i desnu str jer je isti kod
+
+.left-side {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.right-side {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+} 
+  kao kod ispod */
+
+.left-side,
+.right-side {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .profile-image {
@@ -43,6 +68,10 @@ a {
   color: rebeccapurple;
 }
 
-ul {
+ul.links {
   list-style-type: none;
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
 }
