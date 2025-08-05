@@ -20,6 +20,9 @@ body {
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  padding: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 .icon {
@@ -27,12 +30,36 @@ body {
   font-size: 26px;
   font-weight: 700;
   background: lavender;
+  /* da se ne deformise krug stavila sam min width koja fukcionise i za close  */
+  /* min-width: 42px;
+  height: 42px; */
   width: 42px;
   height: 42px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+  /* flex-basis: 42px; */
+  /* basis sam samo probala ali width i height su dovoljne, jos ne kapiram 3 flex properties skroz  */
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -8px;
+}
+
+.header {
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .close-button {
@@ -42,12 +69,14 @@ body {
   font-weight: 400;
   font-size: 16px;
   height: 24px;
+  /* min-width: 24px; isto i ovo ne mora min width ako je flex shrink 0*/
   width: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid #eee;
   padding: 0;
+  flex-shrink: 0;
 }
 
 button {
